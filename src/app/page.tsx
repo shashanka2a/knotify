@@ -271,7 +271,9 @@ export default function Home() {
           <div className="text-center">
             <div className="flex justify-center gap-6 mb-6">
               <motion.a
-                href="#"
+                href="https://instagram.com/knotify.sh"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-pink-400 hover:text-pink-600 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
