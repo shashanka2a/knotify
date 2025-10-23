@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   Heart, 
@@ -20,8 +21,11 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { FloatingPetals } from "@/components/FloatingPetals";
 import { HeartConfetti } from "@/components/HeartConfetti";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
+import { WeddingDetailsForm } from "@/components/WeddingDetailsForm";
 
 export default function Home() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   const features = [
     {
       icon: Sparkles,
@@ -117,6 +121,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
+                onClick={() => setIsFormOpen(true)}
                 className="bg-gradient-to-r from-pink-400 to-amber-400 hover:from-pink-500 hover:to-amber-500 text-white px-8 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Heart className="w-5 h-5 mr-2" />
@@ -126,6 +131,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 variant="outline"
+                onClick={() => document.getElementById('portfolio-section')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border-2 border-pink-300 text-pink-600 hover:bg-pink-50 px-8 py-6 rounded-2xl"
               >
                 <Image className="w-5 h-5 mr-2" />
@@ -180,7 +186,7 @@ export default function Home() {
 
 
       {/* Portfolio Section */}
-      <section className="py-24 px-4">
+      <section id="portfolio-section" className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -248,6 +254,7 @@ export default function Home() {
             
             <Button 
               size="lg"
+              onClick={() => setIsFormOpen(true)}
               className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-10 py-7 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
             >
               <Heart className="w-6 h-6 mr-2 fill-current" />
@@ -294,6 +301,12 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Wedding Details Form Dialog */}
+      <WeddingDetailsForm 
+        isOpen={isFormOpen} 
+        onClose={() => setIsFormOpen(false)} 
+      />
     </div>
   );
 }
