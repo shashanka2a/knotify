@@ -254,7 +254,10 @@ export default function Home() {
             
             <Button 
               size="lg"
-              onClick={() => setIsFormOpen(true)}
+              onClick={() => {
+                const message = encodeURIComponent("Hi! I'd like to create my wedding website with Knotify.");
+                window.open(`https://wa.me/918179504333?text=${message}`, '_blank');
+              }}
               className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-10 py-7 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
             >
               <Heart className="w-6 h-6 mr-2 fill-current" />
