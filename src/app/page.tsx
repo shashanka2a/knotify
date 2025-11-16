@@ -115,7 +115,7 @@ export default function Home() {
           </h1>
             
             <p className="mb-10 max-w-2xl mx-auto text-gray-700 text-lg md:text-xl">
-              Knotify creates your personalized wedding website: elegant, shareable, and unforgettable. Perfect for sharing your love story with family and friends.
+              Knotify creates your personalized wedding website: elegant, shareable, and unforgettable. Perfect for sharing your wedding invitation with family and friends.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
