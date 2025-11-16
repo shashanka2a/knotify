@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Knotify - Because every knot deserves to be notified.",
-  description: "Knotify turns your wedding invitation into a stunning, interactive website — elegant, personal, and unforgettable. Create personalized wedding websites that capture your journey and share essential details.",
+  description: "Knotify turns your wedding invitation into a stunning, interactive website: elegant, personal, and unforgettable. Create personalized wedding websites that capture your journey and share essential details.",
   keywords: ["wedding", "invitation", "website", "digital", "RSVP", "wedding planning", "love story"],
   authors: [{ name: "Knotify Team" }],
   creator: "Knotify",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Knotify - Because every knot deserves to be notified.",
-    description: "Knotify turns your wedding invitation into a stunning, interactive website — elegant, personal, and unforgettable.",
+    description: "Knotify turns your wedding invitation into a stunning, interactive website: elegant, personal, and unforgettable.",
     url: "https://knotify.com",
     siteName: "Knotify",
     images: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Knotify - Because every knot deserves to be notified.",
-    description: "Knotify turns your wedding invitation into a stunning, interactive website — elegant, personal, and unforgettable.",
+    description: "Knotify turns your wedding invitation into a stunning, interactive website: elegant, personal, and unforgettable.",
     images: ["/og-image.jpg"],
   },
   robots: {

@@ -67,12 +67,12 @@ export default function Home() {
     },
     { 
       name: "Aravind & Harika", 
-      image: "https://images.unsplash.com/photo-1682459337036-e7bbc3986d53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZSUyMHBvcnRyYWl0fGVufDF8fHx8MTc2MTE3OTEyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/aravind.png",
       website: "https://www.aravindandharika.com/"
     },
     { 
       name: "Sharath & Meghana", 
-      image: "https://images.unsplash.com/photo-1761121575313-04109e79d9b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwY2VsZWJyYXRpb24lMjBiZWF1dGlmdWx8ZW58MXx8fHwxNzYxMjI1MjcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/sharath.jpg",
       website: "https://www.sharathandmeghana.com/"
     },
   ];
@@ -115,7 +115,7 @@ export default function Home() {
           </h1>
             
             <p className="mb-10 max-w-2xl mx-auto text-gray-700 text-lg md:text-xl">
-              Knotify creates your personalized wedding website — elegant, shareable, and unforgettable. Perfect for sharing your love story with family and friends.
+              Knotify creates your personalized wedding website: elegant, shareable, and unforgettable. Perfect for sharing your love story with family and friends.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -171,7 +171,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="mb-6 text-4xl md:text-5xl text-gray-900">
-                More than an invitation — it's your story, beautifully told.
+                More than an invitation. It's your story, beautifully told.
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Knotify believes every love story deserves to be celebrated in a way that's as unique as the couple themselves. 
@@ -249,7 +249,7 @@ export default function Home() {
               Ready to announce your big day in style?
             </h2>
             <p className="mb-10 text-gray-600 text-lg max-w-2xl mx-auto">
-              Tell us your wedding date and theme — we'll craft your story into a beautiful, shareable website.
+              Tell us your wedding date and theme, and we'll craft your story into a beautiful, shareable website.
             </p>
             
             <Button 
@@ -298,7 +298,7 @@ export default function Home() {
               </motion.a>
             </div>
             <p className="text-gray-600">
-              © 2025 Knotify — Tie the Knot, Beautifully
+              © 2025 Knotify | Tie the Knot, Beautifully
             </p>
           </div>
         </div>
