@@ -167,7 +167,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4 text-4xl md:text-5xl text-gray-900">
+            <h2 className="mb-4 text-4xl md:text-5xl text-gray-900 font-[var(--font-dm-serif)]">
               Every Couple. Every Culture. Every Story.
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -193,7 +193,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-4 text-4xl md:text-5xl text-gray-900">
+            <h2 className="mb-4 text-4xl md:text-5xl text-gray-900 font-[var(--font-dm-serif)]">
               Loved by Couples Everywhere
             </h2>
           </motion.div>
@@ -251,7 +251,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="mb-6 text-4xl md:text-6xl text-gray-900">
+            <h2 className="mb-6 text-4xl md:text-6xl text-gray-900 font-[var(--font-dm-serif)]">
               Ready to announce your big day in style?
             </h2>
             <p className="mb-10 text-gray-600 text-lg max-w-2xl mx-auto">
