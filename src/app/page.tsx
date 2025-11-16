@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   Heart, 
@@ -25,6 +25,7 @@ import { WeddingDetailsForm } from "@/components/WeddingDetailsForm";
 
 export default function Home() {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const features = [
     {
@@ -79,16 +80,30 @@ export default function Home() {
 
   const testimonials = [
     {
-      quote: "Knotify transformed our wedding invitation into a stunning digital experience. Our guests were blown away by the beautiful website and easy sharing features!",
+      quote: "Knotify created the most beautiful and modern wedding invitation website for us. Our guests loved the elegant design!",
       author: "Harish & Deekshitha",
       role: "Wedding November 2025",
     },
     {
-      quote: "From design to delivery, Knotify made everything effortless. The custom gallery and social integration were exactly what we needed for our wedding website.",
+      quote: "The aesthetic design of our wedding website was exactly what we wanted. Knotify made our invitation look stunning!",
       author: "Aravind & Harika",
       role: "Wedding November 2025",
     },
+    {
+      quote: "We're so happy with our wedding website! The modern, elegant design perfectly captured our special day.",
+      author: "Sharath & Meghana",
+      role: "Wedding November 2025",
+    },
   ];
+
+  // Auto-scroll testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FFF5F7] via-[#FFF9F0] to-[#FBEED9]">
@@ -226,10 +241,44 @@ export default function Home() {
             </h2>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
-            ))}
+          <div className="relative">
+            <div className="relative min-h-[250px]">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0"
+                  initial={{ opacity: 0 }}
+                  animate={{ 
+                    opacity: index === currentTestimonial ? 1 : 0,
+                    scale: index === currentTestimonial ? 1 : 0.95
+                  }}
+                  transition={{ duration: 0.5 }}
+                  style={{ 
+                    pointerEvents: index === currentTestimonial ? 'auto' : 'none' 
+                  }}
+                >
+                  <div className="max-w-2xl mx-auto px-4">
+                    <TestimonialCard {...testimonial} />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Dots indicator */}
+            <div className="flex justify-center gap-2 mt-8">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentTestimonial
+                      ? "bg-pink-500 w-8"
+                      : "bg-pink-200 hover:bg-pink-300 w-2"
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
